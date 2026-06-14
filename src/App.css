@@ -1,0 +1,140 @@
+/* Leaflet મેપ માટે જરૂરી CSS */
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+.map-container {
+  height: 300px !important;
+  width: 100% !important;
+  margin-top: 15px;
+  z-index: 0; /* નેવિગેશન બારની નીચે રહે તે માટે */
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 60px; /* બાર જેટલી નીચે જગ્યા રાખશે */
+  position: relative;
+  background-color: #f9f9f9;
+}
+.header {
+  background-color: #2d5a27;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between; /* આ લેંગ્વેજ બટનને ખૂણામાં લઈ જશે */
+  align-items: center;
+}
+
+.header h1 { font-size: 1.1rem; margin: 0; }
+.lang-switcher { padding: 15px; text-align: center; background: #fff; border-bottom: 1px solid #ddd; }
+.lang-box {
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  gap: 5px;
+}
+
+.lang-switcher button {
+  background: #2d5a27;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card-currency {
+  font-weight: bold;
+  color: #2d5a27;
+}
+.tabs { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
+.tabs button { padding: 10px 20px; border: none; border-radius: 20px; background: #e0e0e0; color: #333; font-weight: bold; cursor: pointer; }
+.tabs button.active { background: #2d5a27; color: white; }
+.order-card {
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s; /* ક્લિક પર થોડું હલશે */
+  cursor: pointer;
+}
+.order-card:active {
+  transform: scale(0.98); /* ટચ કરતી વખતે પ્રેસ ઈફેક્ટ */
+}
+.order-card h3 { color: #000; margin-top: 0; font-size: 1.1rem; }
+.detail-text { color: #333 !important; font-weight: 600; margin: 8px 0; }
+.accept-btn { background: #2d5a27; color: white; border: none; padding: 12px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.view-btn { background: #4a90e2; color: white; border: none; padding: 12px; width: 100%; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+/* Order title ને ઘાટું કરવા માટે */
+.dark-title {
+  color: #222 !important; 
+  font-weight: 700 !important;
+  font-size: 1.2rem !important; /* અહીં મેં સાઈઝ ઘટાડી છે */
+  margin-bottom: 10px;
+}
+/* જૂની સ્ટાઈલની સાથે આ ઉમેરો */
+.status-btn { background: #ff9800; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; margin-top: 5px; font-weight: bold; }
+.profile-card { background: white; padding: 20px; border-radius: 10px; text-align: center; margin: 15px; }
+.rating { color: #f39c12; font-size: 1.2rem; }
+.sos-btn { 
+  background: #d32f2f; 
+  color: white; 
+  border: none; 
+  padding: 10px; 
+  margin-top: 5px; 
+  border-radius: 5px; 
+  width: 100%; 
+  cursor: pointer; 
+}
+/* Bottom Navigation Bar - આને ફિક્સ કરો */
+/* નેવિગેશન બારને કમ્પેક્ટ અને પાતળો બનાવવા માટે */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55px; /* આ હાઇટ ઘટાડી */
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #2d5a27;
+  font-size: 10px; /* ટેક્સ્ટ નાનું કર્યું */
+  font-weight: bold;
+}
+
+.nav-item svg {
+  font-size: 18px; /* આઇકન નાનું કર્યું */
+  margin-bottom: 2px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 15px;
+}
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer; /* માઉસ લેતા આંગળી જેવું નિશાન આવશે */
+  transition: transform 0.2s;
+}
+.card:active {
+  transform: scale(0.95); /* ટચ કરતા કાર્ડ દબાયેલું લાગશે */
+}
+
